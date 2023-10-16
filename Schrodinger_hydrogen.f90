@@ -488,8 +488,8 @@ subroutine hydrogen_wave_function(n,l,m,ns,ds,theta,phi,r,psi_r,psi_i,Pr)
         Pa = 1.d0
     endif
 
-    psi_r = psi_r/Pa
-    psi_i = psi_i/Pa
+    psi_r = psi_r/Pa**0.5d0
+    psi_i = psi_i/Pa**0.5d0
     Pr = Pr/Pa
                 
     print*, "Pa = ",Pa
